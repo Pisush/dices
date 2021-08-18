@@ -1,71 +1,22 @@
-<!DOCTYPE html>
-<!-- saved from url=(0045)https://jsfiddle.net/nataliepis/y8gn3vcm/show -->
-<html class="js-focus-visible" data-js-focus-visible=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    
-    <meta http-equiv="edit-Type" edit="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JSFiddle</title>
+<html>
+    <head>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
 
-      <meta name="robots" content="index, follow">
-      <meta name="googlebot" content="index, follow">
+var diceImage = document.createElement('img');
+diceImage.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/2-Dice-Icon.svg/1200px-2-Dice-Icon.svg.png';
+document.body.appendChild(diceImage);
 
-      <script type="text/javascript">
-        var height
-        var force_height = null
-        var slug = "y8gn3vcm"
-        var show_src = "//fiddle.jshell.net/nataliepis/y8gn3vcm/show/light/"
-        var resize_element_counter = 0
-        var shell_edit_url = "/nataliepis/y8gn3vcm/light/"
-      </script>
+diceImage.style.width = '50px';
+diceImage.style.height = '50px';
 
-      <script src="./index_files/embed.js"></script>
-      <link rel="stylesheet" media="screen" href="./index_files/embed-light.css">
-      <link rel="icon" href="https://jsfiddle.net/img/favicon.png">
-  <style type="text/css">
-@font-face {
-  font-weight: 400;
-  font-style:  normal;
-  font-family: 'Circular-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2') format('woff2');
-}
-
-@font-face {
-  font-weight: 500;
-  font-style:  normal;
-  font-family: 'Circular-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Medium-d74eac43c78bd5852478998ce63dceb3.woff2') format('woff2');
-}
-
-@font-face {
-  font-weight: 700;
-  font-style:  normal;
-  font-family: 'Circular-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Bold-83b8ceaf77f49c7cffa44107561909e4.woff2') format('woff2');
-}
-
-@font-face {
-  font-weight: 900;
-  font-style:  normal;
-  font-family: 'Circular-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Black-bf067ecb8aa777ceb6df7d72226febca.woff2') format('woff2');
-}</style></head>
-  <body id="sylvester-standalone">
-    <a class="toEditor" href="https://jsfiddle.net/nataliepis/y8gn3vcm/" target="_blank">
-      <svg width="34" height="40">
-      <use xlink:href="//jsfiddle.net/sprite.svg#logo"></use>
-    </svg>Edit in JSFiddle
-    </a>
-
-    <div id="result">
-      
-    <iframe src="./index_files/saved_resource.html" frameborder="0" sandbox="allow-forms allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-downloads allow-modals allow-popups" allow="midi; geolocation; microphone; camera; display-capture; encrypted-media;"></iframe></div>
-
-    
-  
-
-</body><loom-container id="lo-engage-ext-container"><loom-shadow classname="resolved"></loom-shadow></loom-container></html>
+diceImage.addEventListener('click', function() {
+  var randomNumber = Math.floor(Math.random() * 6) + 1;
+  var diceNumber = document.createElement('div');
+  diceNumber.innerHTML = randomNumber;
+  document.body.appendChild(diceNumber);
+});
+});
+        </script>
+    </head>
+</html>
